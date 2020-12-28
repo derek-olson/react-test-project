@@ -1,0 +1,466 @@
+{
+  "name": "Terrestrial Condition",
+  "column": "EMDS_TRRSTRL_CONDITION",
+  "layer": "EDW_TCATerrestrialCondition",
+  "iframe": "assets/metadata/nwHTML/terrestrial_condition.html",
+  "nodes": [
+    {
+      "name": "Disturbance Agents",
+      "column": "EMDS_DSTRBNC_AGENTS",
+      "layer": "EDW_TCADisturbanceAgentsAndStressors",
+      "iframe": "assets/metadata/nwHTML/disturbance_agents.html",
+      "nodes": [
+        {
+          "name": "Biotic Agents",
+          "column": "EMDS_BIOTIC_AGENTS",
+          "layer": "EDW_TCABioticAgents",
+          "iframe": "assets/metadata/nwHTML/biotic_agents.html",
+          "nodes": [
+            {
+              "name": "Tree Mortality",
+              "column": "EMDS_TREE_MORTALITY",
+              "layer": "EDW_TCATreeMortality",
+              "iframe": "assets/metadata/nwHTML/tree_mortality.html",
+              "nodes": [
+                {
+                  "name": "Tree Mortality - 0-5 years",
+                  "column": "EMDS_TREE_MORTALITY_0_5",
+                  "layer": "EDW_TCATreeMortality0_5Years",
+                  "variable": "IANDDINCID05",
+                  "variableUnit": "% area",
+                  "parameters": [ "IANDDINCID05P1", "IANDDINCID05P2" ],
+                  "metadata": "assets/metadata/nwHTML/IandDincid05_explanation.html",
+                  "iframe": "assets/metadata/nwHTML/tree_mortality_2014_2018.html",
+                  "data": "TCA_Tree_Mortality_2014_2018"
+                },
+                {
+                  "name": "Tree Mortality - 6-10 years",
+                  "column": "EMDS_TREE_MORTALITY_6_10",
+                  "layer": "EDW_TCATreeMortality6_10Years",
+                  "variable": "IANDDINCID610",
+                  "variableUnit": "% area",
+                  "parameters": [ "IANDDINCID610P1", "IANDDINCID610P2" ],
+                  "metadata": "assets/metadata/nwHTML/IandDincid610.doc.Explanation.html",
+                  "iframe": "assets/metadata/nwHTML/tree_mortality_2009_2013.html",
+                  "data": "TCA_Tree_Mortality_2009_2013"
+                }
+              ]
+            },
+                {
+                  "name": "Invasive Species (no data)",
+                  "column": "EDW_TCAInvasiveSpecies",
+                  "data": ""
+                }
+              ]
+            },
+        {
+          "name": "Abiotic Agents",
+          "layer": "EDW_TCAAbioticAgents",
+          "column": "EMDS_ABIOTIC_AGENTS",
+          "iframe": "assets/metadata/nwHTML/abiotic_agents.html",
+          "nodes": [
+            {
+              "name": "Road Density",
+              "column": "EMDS_ROAD_DENSITY",
+              "layer": "EDW_TCARoadDensity",
+              "metadata": "assets/metadata/nwHTML/road_density.doc.Explanation.html",
+              "iframe": "assets/metadata/nwHTML/road_density.html",
+              "nodes": [
+                {
+                  "name": "Unimproved Roads",
+                  "column": "EMDS_UNIMPROVED_ROADS",
+                  "layer": "EDW_TCAUnimprovedRoads",
+                  "variable": "UNIMPROVED",
+                  "variableUnit": "mi/sq.mi.",
+                  "parameters": [ "UNIMPROVEDP1", "UNIMPROVEDP2" ],
+                  "data": "https://apps.fs.usda.gov/fsgisx02/rest/services/wo_nfs_gtac/TCA_Indicator_3/MapServer",
+                  "iframe": "assets/metadata/nwHTML/unimproved_roads.html",
+                  "metadata": "assets/metadata/nwHTML/unimproved.doc.Explanation.html"
+                },
+                {
+                  "name": "Light Duty Roads",
+                  "column": "EMDS_LIGHT_DUTY_ROADS",
+                  "layer": "EDW_TCALightDutyRoads",
+                  "variable": "LIGHTDUTY",
+                  "variableUnit": "mi/sq.mi.",
+                  "parameters": [ "LIGHTDUTYP1", "LIGHTDUTYP2" ],
+                  "data": "https://apps.fs.usda.gov/fsgisx02/rest/services/wo_nfs_gtac/TCA_Indicator_3/MapServer",
+                  "metadata": "assets/metadata/nwHTML/lightDuty.doc.Explanation.html",
+                  "iframe": "assets/metadata/nwHTML/light_duty_roads.html"
+                },
+                {
+                  "name": "Paved Roads",
+                  "column": "EMDS_PAVED_ROADS",
+                  "layer": "EDW_TCAPavedRoads",
+                  "variable": "PAVED",
+                  "variableUnit": "mi/sq.mi.",
+                  "parameters": [ "PAVEDP1", "PAVEDP2" ],
+                  "data": "https://apps.fs.usda.gov/fsgisx02/rest/services/wo_nfs_gtac/TCA_Indicator_3/MapServer",
+                  "iframe": "assets/metadata/nwHTML/paved_roads.html",
+                  "metadata": "assets/metadata/nwHTML/paved.doc.Explanation.html"
+                }
+              ]
+            },
+            {
+              "name": "Climate Exposure",
+              "layer": "EDW_TCAClimateExposure",
+              "column": "EMDS_CLIMATE_EXPOSURE",
+              "metadata": "assets/metadata/nwHTML/climate_exposure.doc.Explanation.html",
+              "iframe": "assets/metadata/nwHTML/climate_exposure.html",
+              "nodes": [
+                {
+                  "name": "Temperature Exposure",
+                  "layer": "EDW_TCATemperatureExposure",
+                  "column": "EMDS_TMPRTR_EXPOSURE",
+                  "iframe": "assets/metadata/nwHTML/temperature_exposure.html",
+                  "metadata": "assets/metadata/nwHTML/temperature_exposure.doc.Explanation.html",
+                  "nodes": [
+                    {
+                      "name": "Spring",
+                      "layer": "EDW_TCATemperatureExposureSpring",
+                      "column": "EMDS_TMP_XPSR_SPRING",
+                      "variableName": "Temperature Exposure - Spring",
+                      "variable": "TEMPSPRING",
+                      "variableUnit": "F",
+                      "parameters": [ "TEMPSPRINGP1", "TEMPSPRINGP2" ],
+                      "data": "TCA_Temperature_Exposure_Spring",
+                      "iframe": "assets/metadata/nwHTML/temp_exposure_spring.html"
+                    },
+                    {
+                      "name": "Summer",
+                      "layer": "EDW_TCATemperatureExposureSummer",
+                      "column": "EMDS_TMP_XPSR_SUMMER",
+                      "variableName": "Temperature Exposure - Summer",
+                      "variable": "TEMPSUMMER",
+                      "variableUnit": "F",
+                      "parameters": [ "TEMPSUMMERP1", "TEMPSUMMERP2" ],
+                      "data": "TCA_Temperature_Exposure_Summer",
+                      "iframe": "assets/metadata/nwHTML/temp_exposure_summer.html"
+                    },
+                    {
+                      "name": "Fall",
+                      "layer": "EDW_TCATemperatureExposureFall",
+                      "column": "EMDS_TMP_EXPOSURE_FALL",
+                      "variableName": "Temperature Exposure - Fall",
+                      "variable": "TEMPFALL",
+                      "variableUnit": "F",
+                      "parameters": [ "TEMPFALLP1", "TEMPFALLP2" ],
+                      "data": "TCA_Temperature_Exposure_Fall",
+                      "iframe": "assets/metadata/nwHTML/temp_exposure_fall.html"
+                    },
+                    {
+                      "name": "Winter",
+                      "layer": "EDW_TCATemperatureExposureWinter",
+                      "column": "EMDS_TMP_XPSR_WINTER",
+                      "variableName": "Temperature Exposure - Winter",
+                      "variable": "TEMPWINTER",
+                      "variableUnit": "F",
+                      "parameters": [ "TEMPWINTERP1", "TEMPWINTERP2" ],
+                      "data": "TCA_Temperature_Exposure_Winter",
+                      "iframe": "assets/metadata/nwHTML/temp_exposure_winter.html"
+                    }
+                  ]
+                },
+                {
+                  "name": "Precipitation Exposure",
+                  "layer": "EDW_TCAPrecipitationExposure",
+                  "column": "EMDS_PRCPTTN_EXPOSURE",
+                  "iframe": "assets/metadata/nwHTML/Precipitation_exposure.html",
+                  "metadata": "assets/metadata/nwHTML/Precipitation_exposure.doc.Explanation.html",
+                  "nodes": [
+                    {
+                      "name": "Spring",
+                      "layer": "EDW_TCAPrecipitationExposureSpring",
+                      "column": "EMDS_PRCP_XPSR_SPRING",
+                      "variableName": "Precipitation Exposure - Spring",
+                      "variable": "PRECIPSPRING",
+                      "variableUnit": "in.",
+                      "parameters": [ "PRECIPSPRINGP1", "PRECIPSPRINGP2" ],
+                      "data": "TCA_Precipitation_Exposure_Spring",
+                      "iframe": "assets/metadata/nwHTML/precip_exposure_spring.html"
+                    },
+                    {
+                      "name": "Spring (% change)",
+                      "layer": "EDW_TCAPrecipitationExposureSpringPercent",
+                      "column": "EMDS_PRCPXPSRSPRNGPRCNT",
+                      "variableName": "Precipitation Exposure (% Change) - Spring",
+                      "variable": "",
+                      "variableUnit": "%",
+                      "parameters": [ "PRECIPSPRINGPCTP1", "PRECIPSPRINGPCTP2" ],
+                      "data": "TCA_Precipitation_Exposure_Spring_Pct",
+                      "iframe": "assets/metadata/nwHTML/precip_exposure_spring_percent.html"
+                    },
+                    {
+                      "name": "Summer",
+                      "layer": "EDW_TCAPrecipitationExposureSummer",
+                      "column": "EMDS_PRCP_XPSR_SUMMER",
+                      "variableName": "Precipitation Exposure - Summer",
+                      "variable": "PRECIPSUMMER",
+                      "variableUnit": "in.",
+                      "parameters": [ "PRECIPSUMMERP1", "PRECIPSUMMERP2" ],
+                      "data": "TCA_Precipitation_Exposure_Summer",
+                      "iframe": "assets/metadata/nwHTML/precip_exposure_summer.html"
+                    },
+                    {
+                      "name": "Summer (% change)",
+                      "layer": "EDW_TCAPrecipitationExposureSummerPercent",
+                      "column": "EMDS_PRCPXPSRSMMRPRCNT",
+                      "variableName": "Precipitation Exposure (% Change) - Summer",
+                      "variable": "PRECIPSUMMERPCT",
+                      "variableUnit": "%",
+                      "parameters": [ "PRECIPSUMMERPCTP1", "PRECIPSUMMERPCTP2" ],
+                      "data": "TCA_Precipitation_Exposure_Summer_Pct",
+                      "iframe": "assets/metadata/nwHTML/precip_exposure_summer_percent.html"
+                    },
+                    {
+                      "name": "Fall",
+                      "layer": "EDW_TCAPrecipitationExposureFall",
+                      "column": "EMDS_PRCP_XPSR_FALL",
+                      "variableName": "Precipitation Exposure - Fall",
+                      "variable": "PRECIPFALL",
+                      "variableUnit": "in.",
+                      "parameters": [ "PRECIPFALLP1", "PRECIPFALLP2" ],
+                      "data": "TCA_Precipitation_Exposure_Fall",
+                      "iframe": "assets/metadata/nwHTML/precip_exposure_fall.html"
+                    },
+                    {
+                      "name": "Fall (% change)",
+                      "layer": "EDW_TCAPrecipitationExposureFallPercent",
+                      "column": "EMDS_PRCPXPSRFLLPRCNT",
+                      "variableName": "Precipitation Exposure (% Change) - Fall",
+                      "variable": "PRECIPFALLPCT",
+                      "variableUnit": "%",
+                      "parameters": [ "PRECIPFALLPCTP1", "PRECIPFALLPCTP2" ],
+                      "data": "TCA_Precipitation_Exposure_Fall_Pct",
+                      "iframe": "assets/metadata/nwHTML/precip_exposure_fall_percent.html"
+                    },
+                    {
+                      "name": "Winter",
+                      "layer": "EDW_TCAPrecipitationExposureWinter",
+                      "column": "EMDS_PRCP_XPSR_WINTER",
+                      "variableName": "Precipitation Exposure - Winter",
+                      "variable": "PRECIPWINTER",
+                      "variableUnit": "in.",
+                      "parameters": [ "PRECIPWINTERP1", "PRECIPWINTERP2" ],
+                      "data": "TCA_Precipitation_Exposure_Winter",
+                      "iframe": "assets/metadata/nwHTML/precip_exposure_winter.html"
+                    },
+                    {
+                      "name": "Winter (% change)",
+                      "layer": "EDW_TCAPrecipitationExposureWinterPercent",
+                      "column": "EMDS_PRCPXPSRWNTRPRCNT",
+                      "variableName": "Precipitation Exposure (% Change) - Winter",
+                      "variable": "PRECIPWINTERPCT",
+                      "variableUnit": "%",
+                      "parameters": [ "PRECIPWINTERPCTP1", "PRECIPWINTERPCTP2" ],
+                      "data": "TCA_Precipitation_Exposure_Winter_Pct",
+                      "iframe": "assets/metadata/nwHTML/precip_exposure_winter_percent.html"
+                    }
+                  ]
+                },
+                {
+                  "name": "Recent Drought Impacts",
+                  "layer": "EDW_TCARecentDroughtImpacts2015_2017",
+                  "column": "EMDS_DROUGHT_IMPACT",
+                  "data": "TCA_Drought",
+                  "variable": "MDZ3_ANNUAL",
+                  "variableUnit": "z-score difference",
+                  "parameters": [ "MDZ3ANNUALP1", "MDZ3ANNUALP2" ],
+                  "iframe": "assets/metadata/nwHTML/mdz3_Annual.html",
+                  "metadata": "assets/metadata/nwHTML/mdz3_Annual.doc.Explanation.html"
+                }
+              ]
+            },
+            {
+              "name": "Air Pollution",
+              "layer": "EDW_TCAAirPollution",
+              "column": "EMDS_AIR_POLLUTION",
+              "iframe": "assets/metadata/nwHTML/air_pollution.html",
+              "nodes": [
+                {
+                  "name": "Soil Acid CLE (no data)",
+                  "column": "EMDS_SOIL_ACID_CLE",
+                  "variable": "SOILCLE",
+                  "variableUnit": "% exceedance",
+                  "parameters": [ "SOILCLEP1", "SOILCLEP2", "SOILCLEP3", "SOILCLEP4", "SOILCLEP5" ]
+                },
+                {
+                  "name": "Nitrogen Deposition",
+                  "column": "EMDS_NITROGEN_CLE",
+                  "layer": "EDW_TCANitrogenDeposition",
+                  "metadata": "assets/metadata/nitrogen.html",
+                  "variable": "NITROGEN",
+                  "variableUnit": "kg/ha/yr",
+                  "parameters": [ "NITROGENP1", "NITROGENP2", "TCA_AIR_GROUP" ],
+                  "data": "TCA_Nitrogen_Deposition",
+                  "iframe": "assets/metadata/nwHTML/nitrogen_CLE.html",
+                  "meatadata": "assets/metadata/nwHTML/nitrogen.doc.Explanation.html"
+                },
+                {
+                  "name": "Ozone",
+                  "layer": "EDW_TCAOzone",
+                  "column": "EMDS_OZONE",
+                  "iframe": "assets/metadata/nwHTML/ozone.html",
+                  "nodes": [
+                    {
+                      "name": "Ozone - acute exposure",
+                      "layer": "EDW_TCAOzoneAcuteExposure",
+                      "column": "EMDS_O3_ACCUTE",
+                      "variable": "O3ACCUTE",
+                      "variableUnit": "hours",
+                      "parameters": [ "O3ACCUTEP1", "O3ACCUTEP2", "O3ACCUTEP3" ],
+                      "data": "TCA_O3_Acute",
+                      "iframe": "assets/metadata/nwHTML/O3_accute.html",
+                      "metadata": "assets/metadata/nwHTML/O3accute.doc.Explanation.html"
+                    },
+                    {
+                      "name": "Ozone - chronic exposure",
+                      "layer": "EDW_TCAOzoneChronicExposure",
+                      "column": "EMDS_O3_CHRONIC",
+                      "variable": "O3CHRONIC",
+                      "variableUnit": "ppm-hours",
+                      "parameters": [ "O3CHRONICP1", "O3CHRONICP2", "O3CHRONICP3" ],
+                      "data": "TCA_O3_Chronic",
+                      "metadata": "assets/metadata/nwHTML/O3chronic.doc.Explanation.html",
+                      "iframe": "assets/metadata/nwHTML/O3_chronic.html"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Uncharacteristic Disturbance",
+              "column": "EMDS_NCHRCTRSTCDSTRBNC",
+              "layer": "EDW_TCAUncharacteristicDisturbanceEvents",
+              "iframe": "assets/metadata/nwHTML/uncharacteristic_disturbance.html",
+              "metadata": "assets/metadata/nwHTML/uncharacteristic_disturbance.doc.Explanation.html",
+              "nodes": [
+                {
+                  "name": "Uncharacteristic Wildfire",
+                  "layer": "EDW_TCAUncharacteristicWildfire",
+                  "column": "EMDS_NCHRCTRSTC_WLDFR",
+                  "iframe": "assets/metadata/nwHTML/uncharacteristic_wildfire.html",
+                  "nodes": [
+                    {
+                      "name": "Wildfire Severity - low",
+                      "column": "EMDS_LOW_SEVERITY",
+                      "layer": "EDW_TCAWildfireSeverityLow",
+                      "variable": "LOWSEV",
+                      "variableUnit": "% area",
+                      "parameters": [ "LOWSEVP1", "LOWSEVP2" ],
+                      "iframe": "assets/metadata/nwHTML/low_severity.html",
+                      "metadata": "assets/metadata/nwHTML/lowSev.doc.Explanation.html",
+                      "data": "TCA_Uncharecteristic_Fire_Severity_Low"
+                    },
+                    {
+                      "name": "Wildfire Severity - moderate",
+                      "column": "EMDS_MODERATE_SEVERITY",
+                      "layer": "EDW_TCAWildfireSeverityModerate",
+                      "variable": "MODSEV",
+                      "variableUnit": "% area",
+                      "parameters": [ "MODSEVP1", "MODSEVP2" ],
+                      "iframe": "assets/metadata/nwHTML/moderate_severity.html",
+                      "metadata": "assets/metadata/nwHTML/modSev.doc.explanation.html",
+                      "data": "TCA_Uncharecteristic_Fire_Severity_Moderate"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vegetation Condition",
+      "column": "EMDS_VGTTN_CONDITION",
+      "layer": "EDW_TCAVegetativeCondition",
+      "iframe": "assets/metadata/nwHTML/vegetation_condition.html",
+      "metadata": "assets/metadata/nwHTML/vegetation_condition.doc.Explanation.html",
+      "nodes": [
+        {
+          "name": "Wildfire Potential",
+          "column": "EMDS_WLDFR_POTENTIAL",
+          "layer": "EDW_TCAWildfireHazardPotential",
+          "iframe": "assets/metadata/nwHTML/wildfire_hazard_potential.html",
+          "metadata": "assets/metadata/nwHTML/wfp.doc.Explanation.html",
+          "nodes": [
+            {
+              "name": "Wildfire Potential - High and Very High",
+              "column": "EMDS_WLDFR_PTNTL_HVH",
+              "layer": "EDW_TCAWildfirePotentialHighAndVeryHigh",
+              "variable": "WFP",
+              "variableUnit": "% area",
+              "parameters": [ "WFPP1", "WFPP2" ],
+              "metadata": "assets/metadata/nwHTML/wfp.doc.Explanation.html",
+              "iframe": "assets/metadata/nwHTML/wildifre_potential_HVH.html",
+              "data": "TCA_Wildfire_Hazard_Potential"
+            },
+            {
+              "name": "Wildfire Potential - Moderate - FR 1 & 2",
+              "column": "EMDS_WLDFR_POTENTIAL_M",
+              "layer": "EDW_TCAWildfirePotentialModerateFR1And2",
+              "variable": "WFPMODERATE",
+              "variableUnit": "% area",
+              "parameters": [ "WFPMODERATEP1", "WFPMODERATEP2" ],
+              "metadata": "assets/metadata/nwHTML/wfp.doc.Explanation.html",
+              "iframe": "assets/metadata/nwHTML/wildfire_hazard_potential_M.html",
+              "data": "TCA_Wildfire_Hazard_Potential_FRG_1and2"
+            }
+          ]
+        },
+        {
+          "name": "Forest Insect and Pathogen Hazard",
+          "column": "EMDS_NSCTNDPTHGNHZRD",
+          "layer": "EDW_TCAInsectAndPathogenHazard",
+          "variable": "IANDDHAZARD",
+          "variableUnit": "% area",
+          "parameters": [ "IANDDHAZARDP1", "IANDDHAZARDP2" ],
+          "metadata": "assets/metadata/nwHTML/IandDhazard.doc.explanation.html",
+          "iframe": "assets/metadata/nwHTML/IandDhazard.html",
+          "data": "TCA_Insect_and_Pathogen_Hazard"
+        },
+        {
+          "name": "Vegetation Departure (no data)",
+          "column": "EMDS_VGTTN_DEPARTURE",
+          "variable": "VDEP",
+          "variableUnit": "% departed",
+          "parameters": [ "VDEPP1", "VDEPP2" ]
+        },
+        {
+          "name": "Deficient Fire",
+          "column": "EMDS_FIRE_DEFICIT",
+          "layer": "EDW_TCAFireDeficit",
+          "variable": "EMDS_FIRE_DEFICIT",
+          "variableUnit": "% area",
+          "parameters": [ "DEFICIENTFIREP1", "DEFICIENTFIREP2", "DEFICIENTFIREP3" ],
+          "metadata": "assets/metadata/nwHTML/deficientFire.doc.explanation.html",
+          "iframe": "assets/metadata/nwHTML/fire_deficit.html",
+          "data": "TCA_Fire_Deficit"
+        },
+        {
+          "name": "Grassland Productivity",
+          "column": "EMDS_GRSSLND_PRDCTVTY",
+          "layer": "EDW_TCAGrasslandProductivity",
+          "variable": "GRASSLANDPROD",
+          "variableUnit": "lbs/acre",
+          "parameters": [ "GRASSLANDPRODP1", "GRASSLANDPRODP2" ],
+          "metadata": "assets/metadata/nwHTML/grasslandProd.doc.Explanation.html",
+          "iframe": "assets/metadata/nwHTML/grassland_productivity.html",
+          "data": "TCA_Productivity_Relative_Change"
+        },
+        {
+          "name": "Grassland Encroachment",
+          "column": "EMDS_ENCROACHMENT",
+          "layer": "EDW_TCAGrasslandEncroachment",
+          "variable": "ENCROACH",
+          "variableUnit": "% area",
+          "parameters": [ "ENCROACHP1", "ENCROACHP2" ],
+          "metadata": "assets/metadata/nwHTML/encroach.doc.explanation.html",
+          "iframe": "assets/metadata/nwHTML/encroachment.html",
+          "data": "TCA_Encroachment"
+        }
+      ]
+    }
+  ]
+}
