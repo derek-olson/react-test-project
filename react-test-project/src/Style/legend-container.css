@@ -1,0 +1,60 @@
+.container{
+    width:fit-content;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+#content1{
+    text-align: center;
+}
+
+.verylow{
+    color:white;
+    background-color: red;
+    padding: 5px;
+}
+
+.low{
+    color:white;
+    background-color: rgb(235, 156, 132);
+    padding: 5px;
+}
+
+.moderate{
+    color:white;
+    background-color: rgb(204, 170, 138);
+    padding: 5px;
+}
+
+.high{
+    color:white;
+    background-color: rgb(114, 179, 216);
+    padding: 5px;
+}
+
+.veryhigh{
+    color:white;
+    background-color: rgb(18, 8, 112);
+    padding: 5px;
+}
+
+.arrow {
+    border: solid rgb(131, 127, 127);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
